@@ -9,7 +9,6 @@ class TaskController {
 		const id = uuidv4();
 		try {
 			const record = await TaskInstance.create({...req.body, id });
-            console.log(record);
             
 			return res.json({ record, msg: "Successfully create" });
 		} catch (e) {
